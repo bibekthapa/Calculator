@@ -3,13 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.calc;
+package com.example.calc.command;
+
+import com.example.calc.Calculate;
 
 /**
  *
  * @author HOME
  */
-public interface Calculate  {
+public class SubCommand implements MathCommand{
+
+    @Override
+    public double Calculate(double x, double y) {
+       return x-y;
+    }
     
-   double Calculate(double x , double y);
 }

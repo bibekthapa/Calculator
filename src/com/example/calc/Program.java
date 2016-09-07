@@ -5,6 +5,11 @@
  */
 package com.example.calc;
 
+import com.example.calc.command.AddCommand;
+import com.example.calc.command.MathCommand;
+import com.example.calc.command.MulCommand;
+import com.example.calc.command.SubCommand;
+
 /**
  *
  * @author HOME
@@ -21,9 +26,13 @@ public class Program {
         int y=5;
         int ch =4;
         
-       MathCommand cmd=new MathCommand();
-       cmd.Calculate(x, y, ch);
-            }}     
+        MathCommand cmd=new MulCommand();
+        System.out.println(cmd.Calculate(x, y));
+        
+      
+    }
+
+}     
     
     
 

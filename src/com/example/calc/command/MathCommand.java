@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.calc;
+package com.example.calc.command;
 
 /**
  *
  * @author HOME
  */
-public interface Calculate  {
-    
-   double Calculate(double x , double y);
+public interface MathCommand {
+     double Calculate(double x, double y);
 }
