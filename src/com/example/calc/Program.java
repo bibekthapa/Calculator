@@ -6,6 +6,7 @@
 package com.example.calc;
 
 import com.example.calc.command.AddCommand;
+import com.example.calc.command.Calculation;
 import com.example.calc.command.MathCommand;
 import com.example.calc.command.MulCommand;
 import com.example.calc.command.SubCommand;
@@ -24,13 +25,22 @@ public class Program {
         
         int x=10;
         int y=5;
-        int ch =4;
+        int ch =2;
         
-        MathCommand cmd=new MulCommand();
-        System.out.println(cmd.Calculate(x, y));
-        
-      
-    }
+       Calculation c = new Calculation();
+       switch(ch){
+           case 1 : 
+       c.doCalculate( new AddCommand(), x, y);
+          break;
+          
+          case 2:
+          c.doCalculate(new SubCommand(),x,y);
+          break;
+          
+          case 3:
+              c.doCalculate(new MulCommand(), x, y);
+              break;
+    }}
 
 }     
     
